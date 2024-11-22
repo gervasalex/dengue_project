@@ -11,6 +11,8 @@ mv dengue.zip ~/project_dengue/data/raw/
 cd ~/project_dengue/data/raw/
 unzip dengue.zip
 
+# number of files present shared file 
+ls *.fasta | wc -l
 # five files found include 
 # dengueseq1.fasta
 # dengueseq2.fasta
@@ -36,6 +38,7 @@ grep -c "^>" dengue_merged.fasta
 
 # number of sequences in the merged file
 grep -v "^>" dengue_merged.fasta | wc -c
+
 # the total number of sequences is  35801
 
 # extracting headers from merged file into the file named dengue_header.txt
@@ -68,10 +71,4 @@ grep "^>" dengue_merged.fasta | cut -d " " -f1 | cut -d ">" -f2
 # creating a file for sequence only named dengue_seq.txt and replace the values in the file with small letters.
 grep -v "^>" dengue_merged.fasta | tr "[:upper:]" "[:lower:]" > dengue_seq.txt
 
- 
-
-
-
-
-
- 
+# the orgnism with the number of highest and least number of bases
