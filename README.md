@@ -78,7 +78,7 @@ grep "^>" dengue_merged.fasta > dengue_header.txt
 ```
 cut -d " " -f2-3 dengue_header.txt > viruses.txt
 ```
-### Outputs
+### Output:
 ### Digitaria streak 
 ### Encephalomyocartidis virus
 ### Eggplant mosaic 
@@ -101,5 +101,5 @@ cut -d " " -f1 dengue_header.txt | cut -d ">" -f2 > viruses_uniqID.txt
 grep -v "^>" dengue_merged.fasta | tr "[:upper:]" "[:lower:]" > dengue_seq.txt
 ```
 
-## the orgnism with the number of highest and least number of bases
+## the organism with the number of highest and least number of bases
 
