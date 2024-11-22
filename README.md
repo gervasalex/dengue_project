@@ -7,19 +7,24 @@ mkdir -p project_dengue/codes project_dengue/data/raw/ project_dengue/data/proce
 
 ## Moving downloaded shared zipped files to the appropriate directory
 ```
- cd Downloads
+cd Downloads
 mv dengue.zip ~/project_dengue/data/raw/
 ```
 
 ## unzipping the shared zipped file
-``` cd ~/project_dengue/data/raw/
+
+```
+cd ~/project_dengue/data/raw/
+```
+
 ```
 unzip dengue.zip
 ````
 
-## number of files present shared file 
- ```
+## number of files present shared file
+```
 ls *.fasta | wc -l
+
 ```
 
 ## Number of lines in each file
@@ -37,17 +42,21 @@ ls *.fasta | wc -l
   |total lines     | 521          |
 
 ## merging all five files into one file named dengue_merged.fasta
-`code` cat *.fasta > dengue_merged.fasta
+```
+cat *.fasta > dengue_merged.fasta
+```
 
 ## number of headers in merged file
 ```
 grep -c "^>" dengue_merged.fasta
 ```
-### there are five headers
+### There are five headers
 
 ## number of sequences in the merged file
-`code` grep -v "^>" dengue_merged.fasta | wc -c
-### the total number of sequences is  35801
+```
+grep -v "^>" dengue_merged.fasta | wc -c
+```
+### The total number of sequences is  35801
 
 ## extracting headers from merged file into the file named dengue_header.txt
 `code` grep "^>" dengue_merged.fasta > dengue_header.txt
