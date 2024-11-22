@@ -96,10 +96,10 @@ cut -d " " -f1 dengue_header.txt | cut -d ">" -f2 > viruses_uniqID.txt
 ### NC_001481.2 
 ### NC_001477.1 
 
-### Create a file for sequence only named dengue_seq.txt and replace the values in the file with small letters.
+## Create a file for sequence only named dengue_seq.txt and replace the values in the file with small letters.
 ```
 grep -v "^>" dengue_merged.fasta | tr "[:upper:]" "[:lower:]" > dengue_seq.txt
 ```
 
-## the organism with the number of highest and least number of bases
+## The organism with the number of highest and least number of bases
 
