@@ -1,21 +1,32 @@
 # dengue_project
 
 ## creating the project directory named denge_project and its subdirectories
- `code` mkdir -p project_dengue/codes project_dengue/data/raw/ project_dengue/data/processed
+ ```
+mkdir -p project_dengue/codes project_dengue/data/raw/ project_dengue/data/processed
+```
 
 ## Moving downloaded shared zipped files to the appropriate directory
-`code` cd Downloads
-`code` mv dengue.zip ~/project_dengue/data/raw/
+```
+ cd Downloads
+mv dengue.zip ~/project_dengue/data/raw/
+```
 
 ## unzipping the shared zipped file
-`code` cd ~/project_dengue/data/raw/
-`code` unzip dengue.zip
+``` cd ~/project_dengue/data/raw/
+```
+unzip dengue.zip
+````
 
 ## number of files present shared file 
-`code` ls *.fasta | wc -l
+ ```
+ls *.fasta | wc -l
+```
 
 ## Number of lines in each file
-`code` wc -l *.fasta
+
+```
+ wc -l *.fasta
+ ```
   |File name       |number of line|
   |----------------|--------------|
   |dengueseq1.fasta| 42           |
@@ -29,7 +40,9 @@
 `code` cat *.fasta > dengue_merged.fasta
 
 ## number of headers in merged file
-`code` grep -c "^>" dengue_merged.fasta
+```
+grep -c "^>" dengue_merged.fasta
+```
 ### there are five headers
 
 ## number of sequences in the merged file
