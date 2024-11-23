@@ -35,7 +35,7 @@ ls *.fasta | wc -l
  ```
 ### Output:
   |File name       |Number of lines|
-  |----------------|--------------|
+  |----------------|:--------------:|
   |dengueseq1.fasta| 42           |
   |dengueseq2.fasta| 115          |
   |dengueseq3.fasta| 94           |
